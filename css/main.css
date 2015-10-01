@@ -18,3 +18,34 @@ h1{
     color: white;
     font-size: 50px;
 }
+
+video {
+    margin: 0 auto;
+    display: block;
+}
+
+#progress-hold{
+    margin: 0 auto;
+    width: 720px;
+    height: 20px;
+    background-color: goldenrod;
+}
+
+#progress-bar{
+    background-color: silver;
+    height: 100%;
+    width: 0;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    font-weight: bolder;
+}
+
+#footer{
+    bottom: 0;
+    position: absolute;
+    color: white;
+}
