@@ -6,6 +6,14 @@ function showClip(data){
 
 function start(){
     showClip(d[0])   
+    for(var i = 0; i < d.length; i++){
+         var str = "<tr><td onclick='{playById("+i+")}'>"+d[i].title+"</td></tr>"
+         $("#selBody > table").append(str);
+    }
+}
+
+function playById(id){
+    showClip(d[id])   
 }
 
 function updateTime(){
@@ -30,21 +38,23 @@ setInterval(updateTime, 200)
 $(window).keyup(function(event){
     if(event.keyCode == 191){
         //Pop up help modal
-        
+        $("#helpModal").modal();
     } else if (event.keyCode == 77){
         //Mute or unmute   
         document.getElementById('v').muted = !document.getElementById('v').muted;
         
     } else if (event.keyCode == 78){
+        //Next video
         var i = parseInt($("#v").attr("vid")) 
         showClip(d[i+1])
     } else if (event.keyCode == 80){
+        //Prev video
         var i = parseInt($("#v").attr("vid")) 
         showClip(d[i-1])
         
     } else if (event.keyCode == 83){
         //Show choose modal
-        
+        $("#selModal").modal();
         
     }
 });
