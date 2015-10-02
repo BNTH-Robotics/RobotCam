@@ -42,6 +42,19 @@ $(window).keyup(function(event){
         var i = parseInt($("#v").attr("vid")) 
         showClip(d[i-1])
         
+    } else if (event.keyCode == 70){
+        //fullscreen
+        
+        var elem = document.getElementById('v')
+        
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        }
+        
     } else if (event.keyCode == 83){
         //Show choose modal
         
